@@ -644,14 +644,14 @@
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                    <button class="group bg-white text-gray-900 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl card-3d">
+                    <a href="#work" class="group bg-white text-gray-900 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl card-3d">
                         <span class="flex items-center justify-center gap-2">
                             View My Work
                             <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                             </svg>
                         </span>
-                    </button>
+                    </a>
                     <button class="border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300 backdrop-blur-sm card-3d" id="contact-btn">
                         Get In Touch
                     </button>
@@ -659,12 +659,6 @@
             </div>
         </div>
 
-        <!-- Scroll indicator
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-            <div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-                <div class="w-1 h-3 bg-white/50 rounded-full mt-2 animate-bounce"></div>
-            </div>
-        </div> -->
     </section>
 
     <!-- About Section -->
@@ -795,178 +789,145 @@
     <!-- Skills Section -->
     <section id="skills" class="py-24 bg-gray-50 dark:bg-gray-900">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
+            <div class="text-center mb-20">
                 <div class="fade-up">
-                    <span class="text-sm font-semibold text-purple-600 uppercase tracking-wider">Skills & Technologies</span>
-                    <h2 class="text-4xl font-bold text-gray-900 mt-4 dark:text-white">My Toolkit</h2>
-                    <p class="text-lg text-gray-600 mt-2 dark:text-gray-300">Toggle between my security and frontend skills</p>
+                    <span class="text-sm font-semibold text-purple-600 uppercase tracking-wider">My Skills</span>
+                    <h2 class="text-5xl font-bold text-gray-900 mt-4 mb-6 dark:text-white">Technical Expertise</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto dark:text-gray-300">
+                        My dual expertise allows me to build applications that are not only beautiful and functional but also secure and resilient.
+                    </p>
                 </div>
             </div>
             
             <!-- Security Skills -->
-            <div class="role-content active grid md:grid-cols-3 gap-8" data-role="security">
-                <div class="fade-up stagger-1">
-                    <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg card-hover card-3d">
-                        <div class="w-14 h-14 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
+            <div class="role-content active" data-role="security">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="fade-up stagger-1 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg card-hover">
+                        <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center mb-6">
                             <i class="fas fa-shield-alt text-white text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4 dark:text-white">Security Tools</h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
-                                <span class="text-gray-600 dark:text-gray-300">Kali Linux</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
-                                <span class="text-gray-600 dark:text-gray-300">Metasploit</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
-                                <span class="text-gray-600 dark:text-gray-300">Wireshark</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 bg-indigo-500 rounded-full"></div>
-                                <span class="text-gray-600 dark:text-gray-300">Burp Suite</span>
-                            </li>
-                        </ul>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4 dark:text-white">Security Assessment</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Comprehensive vulnerability scanning and penetration testing to identify security weaknesses.</p>
                     </div>
-                </div>
-                
-                <div class="fade-up stagger-2">
-                    <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg card-hover card-3d">
-                        <div class="w-14 h-14 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
-                            <i class="fas fa-code text-white text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4 dark:text-white">Programming</h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
-                                <span class="text-gray-600 dark:text-gray-300">Python</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
-                                <span class="text-gray-600 dark:text-gray-300">Bash Scripting</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 bg-teal-500 rounded-full"></div>
-                                <span class="text-gray-600 dark:text-gray-300">C/C++</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-                                <span class="text-gray-600 dark:text-gray-300">PowerShell</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="fade-up stagger-3">
-                    <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg card-hover card-3d">
-                        <div class="w-14 h-14 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-xl flex items-center justify-center mb-6">
+                    
+                    <div class="fade-up stagger-2 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg card-hover">
+                        <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6">
                             <i class="fas fa-network-wired text-white text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4 dark:text-white">Networking</h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
-                                <span class="text-gray-600 dark:text-gray-300">TCP/IP</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 bg-teal-500 rounded-full"></div>
-                                <span class="text-gray-600 dark:text-gray-300">Firewalls</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 bg-emerald-500 rounded-full"></div>
-                                <span class="text-gray-600 dark:text-gray-300">VPNs</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-                                <span class="text-gray-600 dark:text-gray-300">IDS/IPS</span>
-                            </li>
-                        </ul>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4 dark:text-white">Network Security</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Design and implementation of secure network architectures and intrusion detection systems.</p>
+                    </div>
+                    
+                    <div class="fade-up stagger-3 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg card-hover">
+                        <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-lg flex items-center justify-center mb-6">
+                            <i class="fas fa-code text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4 dark:text-white">Secure Coding</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Implementation of security best practices in application development to prevent vulnerabilities.</p>
+                    </div>
+                    
+                    <div class="fade-up stagger-4 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg card-hover">
+                        <div class="w-16 h-16 bg-gradient-to-r from-teal-500 to-green-500 rounded-lg flex items-center justify-center mb-6">
+                            <i class="fas fa-user-secret text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4 dark:text-white">Incident Response</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Developing and implementing strategies for responding to and recovering from security incidents.</p>
                     </div>
                 </div>
             </div>
             
             <!-- Frontend Skills -->
-            <div class="role-content grid md:grid-cols-3 gap-8" data-role="frontend">
-                <div class="fade-up stagger-1">
-                    <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg card-hover card-3d">
-                        <div class="w-14 h-14 bg-gradient-to-r from-pink-500 to-red-500 rounded-xl flex items-center justify-center mb-6">
-                            <i class="fas fa-code text-white text-2xl"></i>
+            <div class="role-content" data-role="frontend">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="fade-up stagger-1 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg card-hover">
+                        <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
+                            <i class="fab fa-html5 text-white text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4 dark:text-white">Frontend</h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 bg-pink-500 rounded-full"></div>
-                                <span class="text-gray-600 dark:text-gray-300">HTML/CSS</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 bg-red-500 rounded-full"></div>
-                                <span class="text-gray-600 dark:text-gray-300">JavaScript</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 bg-orange-500 rounded-full"></div>
-                                <span class="text-gray-600 dark:text-gray-300">TypeScript</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 bg-amber-500 rounded-full"></div>
-                                <span class="text-gray-600 dark:text-gray-300">React</span>
-                            </li>
-                        </ul>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4 dark:text-white">HTML/CSS</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Semantic HTML and modern CSS with Flexbox, Grid, and responsive design principles.</p>
+                    </div>
+                    
+                    <div class="fade-up stagger-2 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg card-hover">
+                        <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-500 rounded-lg flex items-center justify-center mb-6">
+                            <i class="fab fa-js-square text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4 dark:text-white">JavaScript</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Modern JavaScript (ES6+), TypeScript, and frameworks like React, Vue, and Next.js.</p>
+                    </div>
+                    
+                    <div class="fade-up stagger-3 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg card-hover">
+                        <div class="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center mb-6">
+                            <i class="fas fa-mobile-alt text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4 dark:text-white">Responsive Design</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Creating interfaces that work beautifully across all device sizes and screen resolutions.</p>
+                    </div>
+                    
+                    <div class="fade-up stagger-4 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg card-hover">
+                        <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-lg flex items-center justify-center mb-6">
+                            <i class="fas fa-tachometer-alt text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4 dark:text-white">Performance Optimization</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Optimizing web applications for speed, efficiency, and optimal user experience.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tools & Technologies -->
+            <div class="mt-20">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-900 dark:text-white">Tools & Technologies</h3>
+                </div>
+                
+                <!-- Security Tools -->
+                <div class="role-content active" data-role="security">
+                    <div class="flex flex-wrap justify-center gap-6">
+                        <div class="bg-white dark:bg-gray-800 px-6 py-4 rounded-xl shadow-md flex items-center gap-3 card-hover">
+                            <i class="fab fa-linux text-3xl text-gray-800 dark:text-white"></i>
+                            <span class="font-medium text-gray-700 dark:text-white">Kali Linux</span>
+                        </div>
+                        <div class="bg-white dark:bg-gray-800 px-6 py-4 rounded-xl shadow-md flex items-center gap-3 card-hover">
+                            <i class="fas fa-terminal text-3xl text-gray-800 dark:text-white"></i>
+                            <span class="font-medium text-gray-700 dark:text-white">Metasploit</span>
+                        </div>
+                        <div class="bg-white dark:bg-gray-800 px-6 py-4 rounded-xl shadow-md flex items-center gap-3 card-hover">
+                            <i class="fab fa-python text-3xl text-gray-800 dark:text-white"></i>
+                            <span class="font-medium text-gray-700 dark:text-white">Python</span>
+                        </div>
+                        <div class="bg-white dark:bg-gray-800 px-6 py-4 rounded-xl shadow-md flex items-center gap-3 card-hover">
+                            <i class="fas fa-network-wired text-3xl text-gray-800 dark:text-white"></i>
+                            <span class="font-medium text-gray-700 dark:text-white">Wireshark</span>
+                        </div>
+                        <div class="bg-white dark:bg-gray-800 px-6 py-4 rounded-xl shadow-md flex items-center gap-3 card-hover">
+                            <i class="fas fa-bug text-3xl text-gray-800 dark:text-white"></i>
+                            <span class="font-medium text-gray-700 dark:text-white">Burp Suite</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="fade-up stagger-2">
-                    <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg card-hover card-3d">
-                        <div class="w-14 h-14 bg-gradient-to-r from-red-500 to-orange-500 rounded-xl flex items-center justify-center mb-6">
-                            <i class="fas fa-paint-brush text-white text-2xl"></i>
+                <!-- Frontend Tools -->
+                <div class="role-content" data-role="frontend">
+                    <div class="flex flex-wrap justify-center gap-6">
+                        <div class="bg-white dark:bg-gray-800 px-6 py-4 rounded-xl shadow-md flex items-center gap-3 card-hover">
+                            <i class="fab fa-react text-3xl text-blue-500"></i>
+                            <span class="font-medium text-gray-700 dark:text-white">React</span>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4 dark:text-white">Styling</h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 bg-red-500 rounded-full"></div>
-                                <span class="text-gray-600 dark:text-gray-300">Tailwind CSS</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 bg-orange-500 rounded-full"></div>
-                                <span class="text-gray-600 dark:text-gray-300">SASS/SCSS</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 bg-amber-500 rounded-full"></div>
-                                <span class="text-gray-600 dark:text-gray-300">Bootstrap</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                                <span class="text-gray-600 dark:text-gray-300">Figma</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="fade-up stagger-3">
-                    <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg card-hover card-3d">
-                        <div class="w-14 h-14 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-xl flex items-center justify-center mb-6">
-                            <i class="fas fa-tools text-white text-2xl"></i>
+                        <div class="bg-white dark:bg-gray-800 px-6 py-4 rounded-xl shadow-md flex items-center gap-3 card-hover">
+                            <i class="fab fa-vuejs text-3xl text-green-500"></i>
+                            <span class="font-medium text-gray-700 dark:text-white">Vue.js</span>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4 dark:text-white">Tools</h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 bg-orange-500 rounded-full"></div>
-                                <span class="text-gray-600 dark:text-gray-300">Git</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                                <span class="text-gray-600 dark:text-gray-300">Webpack</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 bg-lime-500 rounded-full"></div>
-                                <span class="text-gray-600 dark:text-gray-300">Vite</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-                                <span class="text-gray-600 dark:text-gray-300">VS Code</span>
-                            </li>
-                        </ul>
+                        <div class="bg-white dark:bg-gray-800 px-6 py-4 rounded-xl shadow-md flex items-center gap-3 card-hover">
+                            <i class="fab fa-js-square text-3xl text-yellow-500"></i>
+                            <span class="font-medium text-gray-700 dark:text-white">JavaScript</span>
+                        </div>
+                        <div class="bg-white dark:bg-gray-800 px-6 py-4 rounded-xl shadow-md flex items-center gap-3 card-hover">
+                            <i class="fab fa-css3-alt text-3xl text-blue-600"></i>
+                            <span class="font-medium text-gray-700 dark:text-white">CSS3</span>
+                        </div>
+                        <div class="bg-white dark:bg-gray-800 px-6 py-4 rounded-xl shadow-md flex items-center gap-3 card-hover">
+                            <i class="fab fa-sass text-3xl text-pink-600"></i>
+                            <span class="font-medium text-gray-700 dark:text-white">Sass</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -976,41 +937,63 @@
     <!-- Work Section -->
     <section id="work" class="py-24 bg-white dark:bg-gray-900">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
+            <div class="text-center mb-20">
                 <div class="fade-up">
                     <span class="text-sm font-semibold text-purple-600 uppercase tracking-wider">My Work</span>
-                    <h2 class="text-4xl font-bold text-gray-900 mt-4 dark:text-white">Recent Projects</h2>
-                    <p class="text-lg text-gray-600 mt-2 dark:text-gray-300">Explore my security and frontend projects</p>
+                    <h2 class="text-5xl font-bold text-gray-900 mt-4 mb-6 dark:text-white">Featured Projects</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto dark:text-gray-300">
+                        Here are some of my recent projects that showcase my skills in security engineering and frontend development.
+                    </p>
                 </div>
             </div>
             
             <!-- Security Projects -->
-            <div class="role-content active grid md:grid-cols-2 gap-8" data-role="security">
-                <div class="fade-up stagger-1">
-                    <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg card-hover">
-                        <div class="h-48 project-image"></div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2 dark:text-white">Network Security Audit</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-4">Comprehensive security assessment for enterprise network infrastructure.</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full dark:bg-purple-900 dark:text-purple-200">Kali Linux</span>
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full dark:bg-blue-900 dark:text-blue-200">Wireshark</span>
-                                <span class="px-3 py-1 bg-cyan-100 text-cyan-800 text-xs font-medium rounded-full dark:bg-cyan-900 dark:text-cyan-200">Nmap</span>
+            <div class="role-content active" data-role="security">
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <div class="fade-up stagger-1 bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg card-hover">
+                        <div class="h-56 project-image"></div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4 dark:text-white">Vulnerability Scanner</h3>
+                            <p class="text-gray-600 mb-6 dark:text-gray-300">A comprehensive web application scanner that identifies security vulnerabilities in web applications and APIs.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full dark:bg-purple-900 dark:text-purple-100">Python</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full dark:bg-blue-900 dark:text-blue-100">Flask</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full dark:bg-green-900 dark:text-green-100">SQLite</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="#" class="text-purple-600 font-semibold hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-300">View Project</a>
+                                <a href="#" class="text-gray-600 font-semibold hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-300">
+                                    <span class="flex items-center gap-1">
+                                        GitHub
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                        </svg>
+                                    </span>
+                                </a>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="fade-up stagger-2">
-                    <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg card-hover">
-                        <div class="h-48 project-image"></div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2 dark:text-white">Vulnerability Scanner</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-4">Custom tool for automated vulnerability detection and reporting.</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full dark:bg-blue-900 dark:text-blue-200">Python</span>
-                                <span class="px-3 py-1 bg-cyan-100 text-cyan-800 text-xs font-medium rounded-full dark:bg-cyan-900 dark:text-cyan-200">Selenium</span>
-                                <span class="px-3 py-1 bg-teal-100 text-teal-800 text-xs font-medium rounded-full dark:bg-teal-900 dark:text-teal-200">SQL</span>
+                    
+                    <div class="fade-up stagger-2 bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg card-hover">
+                        <div class="h-56 project-image"></div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4 dark:text-white">Network Intrusion Detection</h3>
+                            <p class="text-gray-600 mb-6 dark:text-gray-300">A real-time network intrusion detection system that monitors network traffic for suspicious activities.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full dark:bg-purple-900 dark:text-purple-100">C++</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full dark:bg-blue-900 dark:text-blue-100">Linux</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full dark:bg-green-900 dark:text-green-100">PCAP</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="#" class="text-purple-600 font-semibold hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-300">View Project</a>
+                                <a href="#" class="text-gray-600 font-semibold hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-300">
+                                    <span class="flex items-center gap-1">
+                                        GitHub
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                        </svg>
+                                    </span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1018,32 +1001,52 @@
             </div>
             
             <!-- Frontend Projects -->
-            <div class="role-content grid md:grid-cols-2 gap-8" data-role="frontend">
-                <div class="fade-up stagger-1">
-                    <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg card-hover">
-                        <div class="h-48 project-image"></div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2 dark:text-white">E-commerce Dashboard</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-4">Modern admin dashboard for e-commerce management with analytics.</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-pink-100 text-pink-800 text-xs font-medium rounded-full dark:bg-pink-900 dark:text-pink-200">React</span>
-                                <span class="px-3 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full dark:bg-red-900 dark:text-red-200">Tailwind</span>
-                                <span class="px-3 py-1 bg-orange-100 text-orange-800 text-xs font-medium rounded-full dark:bg-orange-900 dark:text-orange-200">Chart.js</span>
+            <div class="role-content" data-role="frontend">
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <div class="fade-up stagger-1 bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg card-hover">
+                        <div class="h-56 project-image"></div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4 dark:text-white">E-Commerce Dashboard</h3>
+                            <p class="text-gray-600 mb-6 dark:text-gray-300">A responsive admin dashboard for e-commerce platforms with analytics, inventory management, and order tracking.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full dark:bg-purple-900 dark:text-purple-100">React</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full dark:bg-blue-900 dark:text-blue-100">Tailwind CSS</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full dark:bg-green-900 dark:text-green-100">Chart.js</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="#" class="text-purple-600 font-semibold hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-300">View Project</a>
+                                <a href="#" class="text-gray-600 font-semibold hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-300">
+                                    <span class="flex items-center gap-1">
+                                        GitHub
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                        </svg>
+                                    </span>
+                                </a>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="fade-up stagger-2">
-                    <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg card-hover">
-                        <div class="h-48 project-image"></div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2 dark:text-white">Portfolio Website</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-4">Responsive portfolio website with modern animations and design.</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full dark:bg-red-900 dark:text-red-200">JavaScript</span>
-                                <span class="px-3 py-1 bg-orange-100 text-orange-800 text-xs font-medium rounded-full dark:bg-orange-900 dark:text-orange-200">CSS3</span>
-                                <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-medium rounded-full dark:bg-amber-900 dark:text-amber-200">GSAP</span>
+                    
+                    <div class="fade-up stagger-2 bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg card-hover">
+                        <div class="h-56 project-image"></div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4 dark:text-white">Business Website</h3>
+                            <p class="text-gray-600 mb-6 dark:text-gray-300">A professional corporate website designed to establish strong online presence, showcase services, and generate leads. Features a modern, responsive design with intuitive navigation and conversion-focused elements.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full dark:bg-purple-900 dark:text-purple-100">Vue.js</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full dark:bg-blue-900 dark:text-blue-100">Tailwind CSS</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full dark:bg-green-900 dark:text-green-100">Node.js backend</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="#" class="text-purple-600 font-semibold hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-300">View Project</a>
+                                <a href="#" class="text-gray-600 font-semibold hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-300">
+                                    <span class="flex items-center gap-1">
+                                        GitHub
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                        </svg>
+                                    </span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1055,110 +1058,108 @@
     <!-- Contact Section -->
     <section id="contact" class="py-24 bg-gray-50 dark:bg-gray-900">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
+            <div class="text-center mb-20">
                 <div class="fade-up">
                     <span class="text-sm font-semibold text-purple-600 uppercase tracking-wider">Contact</span>
-                    <h2 class="text-4xl font-bold text-gray-900 mt-4 dark:text-white">Get In Touch</h2>
-                    <p class="text-lg text-gray-600 mt-2 dark:text-gray-300">Let's discuss how I can help with your security or frontend needs</p>
+                    <h2 class="text-5xl font-bold text-gray-900 mt-4 mb-6 dark:text-white">Get In Touch</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto dark:text-gray-300">
+                        Have a project in mind or want to discuss security solutions? Feel free to reach out!
+                    </p>
                 </div>
             </div>
             
-            <div class="max-w-3xl mx-auto">
-                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 card-3d">
-                    <form id="contact-form" class="space-y-6">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div class="fade-up stagger-1">
-                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2 dark:text-gray-300">Name</label>
-                                <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white" required>
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div class="fade-up stagger-1">
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-6">
+                            <div class="w-14 h-14 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope text-white text-xl"></i>
                             </div>
-                            <div class="fade-up stagger-2">
-                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2 dark:text-gray-300">Email</label>
-                                <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white" required>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2 dark:text-white">Email</h3>
+                                <p class="text-gray-600 dark:text-gray-300">hongtsmkh@gmail.com</p>
                             </div>
                         </div>
                         
-                        <div class="fade-up stagger-3">
-                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2 dark:text-gray-300">Subject</label>
-                            <input type="text" id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white" required>
+                        <div class="flex items-start gap-6">
+                            <div class="w-14 h-14 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2 dark:text-white">Phone</h3>
+                                <p class="text-gray-600 dark:text-gray-300">(+855) 963880095</p>
+                            </div>
                         </div>
                         
-                        <div class="fade-up stagger-4">
-                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2 dark:text-gray-300">Message</label>
-                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white" required></textarea>
+                        <div class="flex items-start gap-6">
+                            <div class="w-14 h-14 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2 dark:text-white">Location</h3>
+                                <p class="text-gray-600 dark:text-gray-300">Phnom Penh, CC</p>
+                            </div>
                         </div>
                         
-                        <div class="fade-up stagger-5">
-                            <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-[1.02]">
-                                Send Message
-                            </button>
+                        <div class="flex gap-6 pt-6">
+                            <a href="#" class="w-12 h-12 bg-white dark:bg-gray-800 rounded-xl flex items-center justify-center shadow-md hover:shadow-lg transition-shadow card-hover">
+                                <i class="fab fa-github text-xl text-gray-700 dark:text-white"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-white dark:bg-gray-800 rounded-xl flex items-center justify-center shadow-md hover:shadow-lg transition-shadow card-hover">
+                                <i class="fab fa-linkedin-in text-xl text-gray-700 dark:text-white"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-white dark:bg-gray-800 rounded-xl flex items-center justify-center shadow-md hover:shadow-lg transition-shadow card-hover">
+                                <i class="fab fa-twitter text-xl text-gray-700 dark:text-white"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-white dark:bg-gray-800 rounded-xl flex items-center justify-center shadow-md hover:shadow-lg transition-shadow card-hover">
+                                <i class="fab fa-discord text-xl text-gray-700 dark:text-white"></i>
+                            </a>
                         </div>
-                    </form>
-                    
-                    <div id="form-success" class="hidden mt-6 p-4 bg-green-100 text-green-700 rounded-lg dark:bg-green-900 dark:text-green-200">
-                        <i class="fas fa-check-circle mr-2"></i> Your message has been sent successfully!
-                    </div>
-                    
-                    <div id="form-error" class="hidden mt-6 p-4 bg-red-100 text-red-700 rounded-lg dark:bg-red-900 dark:text-red-200">
-                        <i class="fas fa-exclamation-circle mr-2"></i> There was an error sending your message. Please try again.
                     </div>
                 </div>
                 
-                <div class="grid md:grid-cols-3 gap-8 mt-16">
-                    <div class="fade-up stagger-1 text-center">
-                        <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-envelope text-white text-2xl"></i>
+                <div class="fade-up stagger-2">
+                    <form class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 mb-2 font-medium dark:text-gray-300">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors" placeholder="Your name">
                         </div>
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2 dark:text-white">Email</h3>
-                        <p class="text-gray-600 dark:text-gray-300">hongtsmkh@gmail.com</p>
-                    </div>
-                    
-                    <div class="fade-up stagger-2 text-center">
-                        <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-phone text-white text-2xl"></i>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 mb-2 font-medium dark:text-gray-300">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors" placeholder="Your email address">
                         </div>
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2 dark:text-white">Phone</h3>
-                        <p class="text-gray-600 dark:text-gray-300">(+855) 123-4567</p>
-                    </div>
-                    
-                    <div class="fade-up stagger-3 text-center">
-                        <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-map-marker-alt text-white text-2xl"></i>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 mb-2 font-medium dark:text-gray-300">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors" placeholder="Your message"></textarea>
                         </div>
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2 dark:text-white">Location</h3>
-                        <p class="text-gray-600 dark:text-gray-300">PP, CC</p>
-                    </div>
+                        
+                        <button type="submit" class="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-4 px-6 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-[1.02] shadow-md">
+                            Send Message
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
-                    <div class="text-2xl font-bold text-gradient">Hong Sec</div>
-                    <p class="text-gray-400 mt-2">Security Engineer & Frontend Developer</p>
-                </div>
-                
-                <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fab fa-github text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fab fa-linkedin text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fab fa-twitter text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fab fa-codepen text-xl"></i>
-                    </a>
-                </div>
+    <footer class="py-12 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="text-2xl font-bold text-gradient mb-4">Hong Sec</div>
+            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">Security Engineer & Frontend Developer creating secure and beautiful digital experiences.</p>
+            
+            <div class="flex justify-center gap-8 mb-8">
+                <a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a>
+                <a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a>
+                <a href="#skills" class="text-gray-400 hover:text-white transition-colors">Skills</a>
+                <a href="#work" class="text-gray-400 hover:text-white transition-colors">Work</a>
+                <a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a>
             </div>
             
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
-                <p>&copy; 2023 Hong Sec. All rights reserved.</p>
+            <div class="text-gray-500 text-sm">
+                &copy; 2023 Hong Sec. All rights reserved.
             </div>
         </div>
     </footer>
@@ -1166,7 +1167,7 @@
     <script>
         // Wait for DOM to load
         document.addEventListener('DOMContentLoaded', function() {
-            // Hide loader after 1.5 seconds
+            // Hide loader after page loads
             setTimeout(() => {
                 document.getElementById('loader').classList.add('hidden');
             }, 1500);
@@ -1202,7 +1203,7 @@
                 },
                 frontend: {
                     title: "Frontend Developer",
-                    description: "I create beautiful, responsive, and accessible web interfaces with modern technologies and best practices"
+                    description: "I create beautiful, responsive, and accessible web interfaces with a focus on user experience and performance"
                 }
             };
             
@@ -1214,7 +1215,6 @@
                     roleToggle.classList.remove('active-security', 'active-frontend');
                     roleToggle.classList.add(`active-${role}`);
                     
-                    // Update role options text color
                     roleOptions.forEach(opt => {
                         if (opt === option) {
                             opt.classList.remove('text-gray-400');
@@ -1234,66 +1234,102 @@
                         }
                     });
                     
-                    // Update hero text with typing animation
+                    // Update hero text with typing effect
+                    const newText = roleData[role].title;
+                    const newDescription = roleData[role].description;
+                    
+                    // Simulate typing effect
                     typingText.classList.remove('typing');
                     setTimeout(() => {
-                        typingText.textContent = roleData[role].title;
-                        heroDescription.textContent = roleData[role].description;
-                        typingText.classList.add('typing');
-                    }, 300);
-                    
-                    // Create confetti effect
-                    createConfetti();
+                        typingText.textContent = '';
+                        let i = 0;
+                        const typeWriter = () => {
+                            if (i < newText.length) {
+                                typingText.textContent += newText.charAt(i);
+                                i++;
+                                setTimeout(typeWriter, 100);
+                            } else {
+                                typingText.classList.add('typing');
+                            }
+                        };
+                        typeWriter();
+                        
+                        // Update description
+                        heroDescription.textContent = newDescription;
+                    }, 500);
                 });
             });
             
-            // Scroll animations
-            const fadeElements = document.querySelectorAll('.fade-up');
+            // Fade-up animation on scroll
+            const fadeUpElements = document.querySelectorAll('.fade-up');
             
-            function checkFade() {
-                fadeElements.forEach(element => {
-                    const elementTop = element.getBoundingClientRect().top;
-                    const elementBottom = element.getBoundingClientRect().bottom;
-                    
-                    if (elementTop < window.innerHeight - 100 && elementBottom > 0) {
-                        element.classList.add('visible');
+            const fadeUpObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
                     }
                 });
-            }
+            }, { threshold: 0.1 });
             
-            // Initial check
-            checkFade();
-            
-            // Scroll event listener
-            window.addEventListener('scroll', checkFade);
-            
-            // Back to top button
-            const backToTopButton = document.getElementById('back-to-top');
-            
-            window.addEventListener('scroll', () => {
-                if (window.pageYOffset > 300) {
-                    backToTopButton.classList.add('visible');
-                } else {
-                    backToTopButton.classList.remove('visible');
-                }
-                
-                // Update progress bar
-                const winHeight = window.innerHeight;
-                const docHeight = document.documentElement.scrollHeight;
-                const scrollTop = window.pageYOffset;
-                const trackLength = docHeight - winHeight;
-                const progress = (scrollTop / trackLength) * 100;
-                document.getElementById('progress-bar').style.width = `${progress}%`;
+            fadeUpElements.forEach(element => {
+                fadeUpObserver.observe(element);
             });
             
-            backToTopButton.addEventListener('click', () => {
+            // Progress bar on scroll
+            const progressBar = document.getElementById('progress-bar');
+            
+            window.addEventListener('scroll', () => {
+                const windowHeight = window.innerHeight;
+                const documentHeight = document.documentElement.scrollHeight - windowHeight;
+                const scrollPosition = window.scrollY;
+                const scrollPercentage = (scrollPosition / documentHeight) * 100;
+                
+                progressBar.style.width = `${scrollPercentage}%`;
+                
+                // Show/hide back to top button
+                const backToTop = document.getElementById('back-to-top');
+                if (scrollPosition > 500) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            });
+            
+            // Back to top functionality
+            document.getElementById('back-to-top').addEventListener('click', () => {
                 window.scrollTo({
                     top: 0,
                     behavior: 'smooth'
                 });
             });
             
-            // Theme toggle
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Contact button scroll to contact section
+            document.getElementById('contact-btn').addEventListener('click', () => {
+                document.getElementById('contact').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+            
+            // Theme toggle functionality
             const themeToggle = document.getElementById('theme-toggle');
             const themeIcon = themeToggle.querySelector('i');
             
@@ -1307,134 +1343,61 @@
                     themeIcon.classList.remove('fa-sun');
                     themeIcon.classList.add('fa-moon');
                 }
-                
-                // Shake animation
-                themeToggle.classList.add('shake');
-                setTimeout(() => {
-                    themeToggle.classList.remove('shake');
-                }, 500);
             });
             
-            // Contact form
-            const contactForm = document.getElementById('contact-form');
-            const formSuccess = document.getElementById('form-success');
-            const formError = document.getElementById('form-error');
+            // Create particles
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random properties
+                const size = Math.random() * 5 + 2;
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                const delay = Math.random() * 10;
+                const duration = Math.random() * 10 + 10;
+                
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${posX}%`;
+                particle.style.top = `${posY}%`;
+                particle.style.animationDelay = `${delay}s`;
+                particle.style.animationDuration = `${duration}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+            
+            // Form submission
+            const contactForm = document.querySelector('form');
             
             contactForm.addEventListener('submit', (e) => {
                 e.preventDefault();
                 
-                // Simulate form submission
-                const submitButton = contactForm.querySelector('button[type="submit"]');
-                const originalText = submitButton.textContent;
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
                 
-                submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-                submitButton.disabled = true;
-                
-                setTimeout(() => {
-                    // Randomly show success or error for demo
-                    if (Math.random() > 0.3) {
-                        formSuccess.classList.remove('hidden');
-                        formError.classList.add('hidden');
-                        contactForm.reset();
-                    } else {
-                        formError.classList.remove('hidden');
-                        formSuccess.classList.add('hidden');
-                    }
-                    
-                    submitButton.textContent = originalText;
-                    submitButton.disabled = false;
-                    
-                    // Hide messages after 5 seconds
+                // Simple validation
+                if (!name || !email || !message) {
+                    contactForm.classList.add('shake');
                     setTimeout(() => {
-                        formSuccess.classList.add('hidden');
-                        formError.classList.add('hidden');
-                    }, 5000);
-                }, 1500);
-            });
-            
-            // Contact button in hero
-            document.getElementById('contact-btn').addEventListener('click', () => {
-                document.getElementById('contact').scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-            
-            // Create particles
-            function createParticles() {
-                const particlesContainer = document.getElementById('particles');
-                const particleCount = 50;
-                
-                for (let i = 0; i < particleCount; i++) {
-                    const particle = document.createElement('div');
-                    particle.classList.add('particle');
-                    
-                    // Random properties
-                    const size = Math.random() * 5 + 2;
-                    const posX = Math.random() * 100;
-                    const posY = Math.random() * 100;
-                    const delay = Math.random() * 10;
-                    const duration = Math.random() * 10 + 10;
-                    
-                    particle.style.width = `${size}px`;
-                    particle.style.height = `${size}px`;
-                    particle.style.left = `${posX}%`;
-                    particle.style.top = `${posY}%`;
-                    particle.style.animationDelay = `${delay}s`;
-                    particle.style.animationDuration = `${duration}s`;
-                    
-                    particlesContainer.appendChild(particle);
+                        contactForm.classList.remove('shake');
+                    }, 500);
+                    return;
                 }
-            }
-            
-            createParticles();
-            
-            // Create confetti
-            function createConfetti() {
-                const confettiCount = 100;
-                const colors = ['#ff577f', '#ff884b', '#ffd384', '#fff9b0', '#3498db', '#2ecc71', '#9b59b6'];
                 
-                for (let i = 0; i < confettiCount; i++) {
-                    const confetti = document.createElement('div');
-                    confetti.classList.add('confetti');
-                    
-                    // Random properties
-                    const size = Math.random() * 10 + 5;
-                    const color = colors[Math.floor(Math.random() * colors.length)];
-                    const posX = Math.random() * window.innerWidth;
-                    const delay = Math.random() * 2;
-                    const duration = Math.random() * 3 + 2;
-                    
-                    confetti.style.width = `${size}px`;
-                    confetti.style.height = `${size}px`;
-                    confetti.style.backgroundColor = color;
-                    confetti.style.left = `${posX}px`;
-                    confetti.style.animationDelay = `${delay}s`;
-                    confetti.style.animationDuration = `${duration}s`;
-                    
-                    document.body.appendChild(confetti);
-                    
-                    // Remove after animation completes
-                    setTimeout(() => {
-                        confetti.remove();
-                    }, (delay + duration) * 1000);
-                }
-            }
-            
-            // Smooth scroll for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-                });
+                // In a real application, you would send this data to a server
+                console.log('Form submitted:', { name, email, message });
+                
+                // Show success message
+                alert('Thank you for your message! I will get back to you soon.');
+                
+                // Reset form
+                contactForm.reset();
             });
         });
     </script>
