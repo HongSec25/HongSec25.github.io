@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hong Sec - Project Show</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .fade-up {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .project-image {
+            background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            overflow-y: auto;
+            padding: 20px;
+        }
+        
+        .modal-content {
+            background: white;
+            margin: 5% auto;
+            padding: 0;
+            border-radius: 12px;
+            max-width: 900px;
+            position: relative;
+            animation: modalFadeIn 0.3s;
+        }
+        
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+        }
+        
+        /* Filter buttons */
+        .filter-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        /* Back to portfolio button */
+        .back-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            transform: translateX(-5px);
+        }
+        
+        /* Project slider */
+        .project-slider {
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        
+        .slider-image {
+            transition: transform 0.5s ease;
+        }
+        
+        .slider-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .slider-nav {
+            background: rgba(0, 0, 0, 0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .slider-nav:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-effect">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="portfolioU.html" class="text-2xl font-bold text-gradient">HS</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="portfolioU.html" class="back-btn text-gray-700 hover:text-gray-900 px-4 py-2 rounded-lg transition-colors flex items-center gap-2">
+                        <i class="fas fa-arrow-left"></i>
+                        Back to Portfolio
+                    </a>
+                </div>
+                <a href="portfolioU.html" class="md:hidden back-btn text-gray-700 hover:text-gray-900 px-4 py-2 rounded-lg transition-colors flex items-center gap-2">
+                    <i class="fas fa-arrow-left"></i>
+                    Back
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 hero-gradient">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">Project <span class="text-gradient">Show</span></h1>
+            <p class="text-xl text-white/70 max-w-3xl mx-auto">Showcasing my work in security engineering and frontend development</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Filter buttons -->
+            <div class="flex justify-center gap-4 mb-12 flex-wrap">
+                <button class="filter-btn active px-6 py-2 rounded-full border border-gray-300" data-filter="all">All Projects</button>
+                <button class="filter-btn px-6 py-2 rounded-full border border-gray-300" data-filter="security">Security</button>
+                <button class="filter-btn px-6 py-2 rounded-full border border-gray-300" data-filter="frontend">Frontend</button>
+            </div>
+            
+            <!-- Projects Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+                <!-- Security Project 1 -->
+                <div class="project-item security fade-up bg-gray-50 rounded-2xl overflow-hidden shadow-lg card-hover" data-project="1">
+                    <div class="h-48 project-image"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Vulnerability Scanner</h3>
+                        <p class="text-gray-600 mb-4">A comprehensive web application scanner that identifies security vulnerabilities.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Flask</span>
+                        </div>
+                        <button class="view-project-btn w-full bg-gray-900 text-white py-2 px-4 rounded-lg font-medium hover:bg-gray-800 transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Security Project 2 -->
+                <div class="project-item security fade-up bg-gray-50 rounded-2xl overflow-hidden shadow-lg card-hover" data-project="2">
+                    <div class="h-48 project-image"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Network Intrusion Detection</h3>
+                        <p class="text-gray-600 mb-4">Real-time network intrusion detection system monitoring for suspicious activities.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">C++</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Linux</span>
+                        </div>
+                        <button class="view-project-btn w-full bg-gray-900 text-white py-2 px-4 rounded-lg font-medium hover:bg-gray-800 transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Frontend Project 1 -->
+                <div class="project-item frontend fade-up bg-gray-50 rounded-2xl overflow-hidden shadow-lg card-hover" data-project="3">
+                    <div class="h-48 project-image"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">E-Commerce Dashboard</h3>
+                        <p class="text-gray-600 mb-4">Responsive admin dashboard for e-commerce platforms with analytics.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">React</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Tailwind</span>
+                        </div>
+                        <button class="view-project-btn w-full bg-gray-900 text-white py-2 px-4 rounded-lg font-medium hover:bg-gray-800 transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Frontend Project 2 -->
+                <div class="project-item frontend fade-up bg-gray-50 rounded-2xl overflow-hidden shadow-lg card-hover" data-project="4">
+                    <div class="h-48 project-image"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Business Website</h3>
+                        <p class="text-gray-600 mb-4">Professional corporate website with modern, responsive design.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Vue.js</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Tailwind</span>
+                        </div>
+                        <button class="view-project-btn w-full bg-gray-900 text-white py-2 px-4 rounded-lg font-medium hover:bg-gray-800 transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Security Project 3 -->
+                <div class="project-item security fade-up bg-gray-50 rounded-2xl overflow-hidden shadow-lg card-hover" data-project="5">
+                    <div class="h-48 project-image"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Secure Authentication System</h3>
+                        <p class="text-gray-600 mb-4">Multi-factor authentication system with advanced security features.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Node.js</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">JWT</span>
+                        </div>
+                        <button class="view-project-btn w-full bg-gray-900 text-white py-2 px-4 rounded-lg font-medium hover:bg-gray-800 transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Frontend Project 3 -->
+                <div class="project-item frontend fade-up bg-gray-50 rounded-2xl overflow-hidden shadow-lg card-hover" data-project="6">
+                    <div class="h-48 project-image"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Real Estate Platform</h3>
+                        <p class="text-gray-600 mb-4">Property listing platform with advanced search and filtering capabilities.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">React</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Firebase</span>
+                        </div>
+                        <button class="view-project-btn w-full bg-gray-900 text-white py-2 px-4 rounded-lg font-medium hover:bg-gray-800 transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modals -->
+    <!-- Modal 1: Vulnerability Scanner -->
+    <div class="modal" id="modal-1">
+        <div class="modal-content">
+            <div class="close-modal">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="project-slider relative">
+                <div class="h-96 bg-gradient-to-br from-purple-400 via-blue-500 to-cyan-400 flex items-center justify-center">
+                    <div class="text-white text-8xl">🔒</div>
+                </div>
+            </div>
+            <div class="p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Vulnerability Scanner</h2>
+                <p class="text-gray-600 mb-6">A comprehensive web application scanner that identifies security vulnerabilities in web applications and APIs. This tool performs automated security testing to detect common vulnerabilities like SQL injection, XSS, CSRF, and more.</p>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Features</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li>Automated vulnerability detection</li>
+                            <li>Detailed security reports</li>
+                            <li>API security testing</li>
+                            <li>Custom scanning profiles</li>
+                            <li>Integration with CI/CD pipelines</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Technologies</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Flask</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">SQLite</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">Selenium</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">Nmap</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex gap-4">
+                    <a href="#" class="bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all">
+                        Live Demo
+                    </a>
+                    <a href="#" class="border border-gray-300 text-gray-700 py-3 px-6 rounded-lg font-semibold hover:bg-gray-100 transition-all">
+                        View Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Network Intrusion Detection -->
+    <div class="modal" id="modal-2">
+        <div class="modal-content">
+            <div class="close-modal">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="project-slider relative">
+                <div class="h-96 bg-gradient-to-br from-blue-400 via-purple-500 to-pink-400 flex items-center justify-center">
+                    <div class="text-white text-8xl">🌐</div>
+                </div>
+            </div>
+            <div class="p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Network Intrusion Detection System</h2>
+                <p class="text-gray-600 mb-6">A real-time network intrusion detection system that monitors network traffic for suspicious activities and potential threats. The system analyzes packets, detects anomalies, and alerts administrators of potential security breaches.</p>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Features</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li>Real-time traffic monitoring</li>
+                            <li>Anomaly detection algorithms</li>
+                            <li>Custom rule configuration</li>
+                            <li>Alert system with severity levels</li>
+                            <li>Historical data analysis</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Technologies</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">C++</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Linux</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">PCAP</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">MySQL</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">Boost</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex gap-4">
+                    <a href="#" class="bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all">
+                        Live Demo
+                    </a>
+                    <a href="#" class="border border-gray-300 text-gray-700 py-3 px-6 rounded-lg font-semibold hover:bg-gray-100 transition-all">
+                        View Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: E-Commerce Dashboard -->
+    <div class="modal" id="modal-3">
+        <div class="modal-content">
+            <div class="close-modal">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="project-slider relative">
+                <div class="h-96 bg-gradient-to-br from-pink-400 via-red-500 to-orange-400 flex items-center justify-center">
+                    <div class="text-white text-8xl">📊</div>
+                </div>
+            </div>
+            <div class="p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">E-Commerce Dashboard</h2>
+                <p class="text-gray-600 mb-6">A responsive admin dashboard for e-commerce platforms with analytics, inventory management, and order tracking. This dashboard provides business owners with insights into sales performance, customer behavior, and inventory status.</p>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Features</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li>Sales analytics and reporting</li>
+                            <li>Inventory management system</li>
+                            <li>Customer relationship management</li>
+                            <li>Order processing workflow</li>
+                            <li>Multi-store support</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Technologies</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">React</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Tailwind CSS</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Chart.js</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">Redux</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">REST API</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex gap-4">
+                    <a href="#" class="bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all">
+                        Live Demo
+                    </a>
+                    <a href="#" class="border border-gray-300 text-gray-700 py-3 px-6 rounded-lg font-semibold hover:bg-gray-100 transition-all">
+                        View Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: Business Website -->
+    <div class="modal" id="modal-4">
+        <div class="modal-content">
+            <div class="close-modal">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="project-slider relative">
+                <div class="h-96 bg-gradient-to-br from-green-400 via-teal-500 to-blue-400 flex items-center justify-center">
+                    <div class="text-white text-8xl">🏢</div>
+                </div>
+            </div>
+            <div class="p-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Business Website</h2>
+                <p class="text-gray-600 mb-6">A professional corporate website designed to establish strong online presence, showcase services, and generate leads. Features a modern, responsive design with intuitive navigation and conversion-focused elements.</p>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Features</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li>Responsive design for all devices</li>
+                            <li>Service showcase with animations</li>
+                            <li>Contact form with validation</li>
+                            <li>Blog/News section</li>
+                            <li>SEO optimized structure</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Technologies</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Vue.js</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Tailwind CSS</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Node.js</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">MongoDB</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">Express</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex gap-4">
+                    <a href="cloud-cafe.html" class="bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all">
+                        Live Demo
+                    </a>
+                    <a href="#" class="border border-gray-300 text-gray-700 py-3 px-6 rounded-lg font-semibold hover:bg-gray-100 transition-all">
+                        View Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional modals would follow the same pattern for projects 5 and 6 -->
+
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="text-2xl font-bold text-gradient mb-4">Hong Sec</div>
+            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">Security Engineer & Frontend Developer creating secure and beautiful digital experiences.</p>
+            
+            <div class="flex justify-center gap-6 mb-8">
+                <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            
+            <div class="text-gray-500 text-sm">
+                &copy; 2023 Hong Sec. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Filter functionality
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectItems = document.querySelectorAll('.project-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    // Filter projects
+                    const filter = button.getAttribute('data-filter');
+                    
+                    projectItems.forEach(item => {
+                        if (filter === 'all' || item.classList.contains(filter)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Modal functionality
+            const viewButtons = document.querySelectorAll('.view-project-btn');
+            const modals = document.querySelectorAll('.modal');
+            const closeButtons = document.querySelectorAll('.close-modal');
+            
+            viewButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const projectItem = button.closest('.project-item');
+                    const projectId = projectItem.getAttribute('data-project');
+                    const modal = document.getElementById(`modal-${projectId}`);
+                    
+                    if (modal) {
+                        modal.style.display = 'block';
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            });
+            
+            closeButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const modal = button.closest('.modal');
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                });
+            });
+            
+            // Close modal when clicking outside
+            modals.forEach(modal => {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            });
+            
+            // Fade-up animation on scroll
+            const fadeUpElements = document.querySelectorAll('.fade-up');
+            
+            const fadeUpObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            fadeUpElements.forEach(element => {
+                fadeUpObserver.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
